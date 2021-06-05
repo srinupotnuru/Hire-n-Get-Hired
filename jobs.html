@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <title>Hire and Get Hired</title>
+    <script src="main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+</head>
+<body>
+ 
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><b> Hire and Get Hired </b></a>
+          <button type="button" class="navbar-toggle navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#jobs">Jobs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="login()">Hire</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    <div class="container-fluid">
+      <section>
+        
+        <div class="container" id="jobs">
+          <h2 class="my-4">These are the services available temperorly</h2>
+          <div class="row">
+            <div class="card">
+              <img class="card-img-top ci" src="../assets/plumber.gif" alt="Card image cap">
+                <div class="card-body">
+                <h2 class="card-title">Plumber</h2>
+                <a href="#" class="btn btn-block btn-primary">See Jobs</a>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top ci" src="../assets/painter.gif" alt="Card image cap">
+                <div class="card-body">
+                <h2 class="card-title">Painter</h2>
+                <a href="#" class="btn btn-block btn-primary">See Jobs</a>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top ci" src="../assets/gardener.gif" alt="Card image cap">
+                <div class="card-body">
+                <h2 class="card-title">Gardener</h2>
+                <a href="#" class="btn btn-block btn-primary">See Jobs</a>
+              </div>
+            </div>
+            
+          </div>
+          <div class="row">
+            <div class="card">
+              <img class="card-img-top ci" src="../assets/constructor.jpg" alt="Card image cap">
+                <div class="card-body">
+                <h2 class="card-title">Constructor</h2>
+                <a href="#" class="btn btn-block btn-primary">See Jobs</a>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top ci" src="../assets/roofer.gif" alt="Card image cap">
+                <div class="card-body">
+                <h2 class="card-title">Roofer</h2>
+                <a href="#" class="btn btn-block btn-primary">See Jobs</a>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top ci" src="../assets/carpenter.gif" alt="Card image cap">
+                <div class="card-body">
+                <h2 class="card-title">Carpenter</h2>
+                <a href="#" class="btn btn-block btn-primary">See Jobs</a>
+              </div>
+            </div>
+            
+          </div>
+          <div class="row">
+            <div class="card">
+              <img class="card-img-top ci" src="../assets/welderr.gif" alt="Card image cap">
+                <div class="card-body">
+                <h2 class="card-title">Welder</h2>
+                <a href="#" class="btn btn-block btn-primary">See Jobs</a>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top ci" src="../assets/electrician.gif" alt="Card image cap">
+                <div class="card-body">
+                <h2 class="card-title">Electrician</h2>
+                <a href="#" class="btn btn-block btn-primary">See Jobs</a>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top ci" src="../assets/delivary.gif" alt="Card image cap">
+                <div class="card-body">
+                <h2 class="card-title">Delivery Boy</h2>
+                <a href="#" class="btn btn-block btn-primary">See Jobs</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+    </div>
+      <!-- Site footer -->
+      <footer class="site-footer" id="about">
+        
+        <div class="container">
+          <hr>
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <p class="text-justify"><b>Hire of Get Hired</b> is a support website which aims to provide a medium for jobless and migrate workers.So we made a website application in which employers and workers data will be preset. This web application acts as a medium for job hiring.</p>
+            </div>
+  
+            
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#" onclick="login()">Hire</a></li>
+                <li><a href="#jobs">Get Hired</a></li>
+   
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        
+  </footer>
+</body>
+</html>

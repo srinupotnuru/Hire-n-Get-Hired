@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="./app.js"></script>
+    <link rel="stylesheet" href="home.css">
+    <title>Document</title>
+    
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg fixed-top" role="navigation">
+      <div class="container-fluid">
+        
+          <a class="navbar-brand" href="#" ><h4>Hire n Get Hired</h4></a>
+          <h3 id="name"></h3>
+          <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+              &#9776;
+          </button>
+          <div class="collapse navbar-collapse" id="exCollapsingNavbar">
+              <ul class="nav navbar-nav mr-auto">
+                  
+              </ul>
+              <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
+                  <img *ngIf="authState" src="" alt="">
+                  <li class="nav-item order-2 order-md-1"><a href="#" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li>
+                  
+                  <a href="../index..html"><button onclick="logOut()" type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary " >Signout <span class="caret"></span></button></a>
+                  
+              </ul>
+          </div>
+      </div>
+  </nav>
+  <div id="dummy"></div>
+  
+  <div id="dummy"></div>
+  <div class="jumbotron d-flex justify-content-center bg-primary">
+    <div class="row">
+      <div class="col-sm-12 col-md-8">
+        <h3 class="display-4">Hey, Employer are you ready to provide Jobs.</h3>
+        <p class="lead">then start filling the below form to provide job.</p>
+        
+      </div>
+    </div>
+    
+  </div>
+  <div class="editor-page">
+    <div class="container page">
+      <div class="row">
+        <div class="col-md-10 offset-md-1 col-xs-12">
+          <form >
+            <fieldset >
+  
+              <fieldset class="form-group">
+                <input class="form-control form-control-lg"
+                  formControlName="title"
+                  type="text"
+                  placeholder="Job Title" id="title" />
+              </fieldset>
+             
+              
+             
+              <fieldset class="form-group">
+                <textarea class="form-control"
+                  formControlName="body"
+                  rows="8"
+                  placeholder="Job Description along with salary details" id="desc"></textarea>
+              </fieldset>
+              <fieldset class="form-group">
+                <input class="form-control"
+                  type="text"
+                  placeholder="Monthly Salary"
+                 
+                   id="salary"/>
+              </fieldset>
+              <fieldset class="form-group">
+                <input class="form-control"
+                  type="text"
+                  placeholder="Additional Job Details"
+                 
+                   id="tag"/>
+              </fieldset>
+              
+              <fieldset class="form-group">
+                <input class="form-control"
+                  type="text"
+                  placeholder="Number of openings"
+                 
+                   id="openings"/>
+                   
+              </fieldset>
+              <fieldset class="form-group">
+                <input class="form-control"
+                  type="text"
+                  placeholder="Company Name"
+                 
+                   id="company"/>
+                   
+              </fieldset>
+              <fieldset class="form-group">
+                <input class="form-control"
+                  type="text"
+                  placeholder="Company Mail to contact"
+                 
+                   id="contact"/>
+                   
+              </fieldset>
+  
+              <button class="btn btn-lg pull-xs-right btn-primary" id="foot" type="button" onclick="push()">
+                Publish Job
+              </button>
+  
+            </fieldset>
+          </form>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  
+  
+  
+  <footer class="site-footer" id="about">
+        
+    <div class="container">
+      <hr>
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify"><b>Hire of Get Hired</b> is a support website which aims to provide a medium for jobless and migrate workers.So we made a website application in which employers and workers data will be preset. This web application acts as a medium for job hiring.</p>
+        </div>
+
+      </div>
+      <hr>
+    </div>
+    
+</footer>
+  </body>
+</html>
