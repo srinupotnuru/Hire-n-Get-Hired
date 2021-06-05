@@ -47,28 +47,34 @@ window.onload = function() {
 }
 function push()
 {
-  var qt=document.getElementById('title').value;
+  
   var cat=document.getElementById("cat").value;
   var des=document.getElementById('desc').value;
-  var t=document.getElementById('tag').value;
-  var u = sessionStorage.getItem('user');
+  var salary=document.getElementById('salary').value;
+  var additional = document.getElementById('additional').value;
+  var openings = document.getElementById('openings').value;
+  var company=document.getElementById('company').value;
+  var contact = document.getElementById('contact').value
+  let u = sessionStorage.getItem('user');
   u=JSON.parse(u);
   console.log(u);
   var id=u.email;
   id=id.substring(0,id.length-4);
   var dt=new Date().getTime();
   id=id+dt;
-  const ref_obj = firebase.firestore().collection('questions').doc(id);
+  const ref_obj = firebase.firestore().collection(cat).doc(id);
         ref_obj.set({
-            "title": qt,
-            "lab": cat,
+            "title": cat,
             "description":des,
-            "tags":t,
-            "author":u.displayName,
-            "email":u.email,
+            "salary":salary,
+            "additional":additional,
+            "openings":openings,
+            "company":company,
+            "contact":contact,
+
     
         });
-        var temp=firebase.firestore().collection('questions').get();
+        var temp=firebase.firestore().collection(cat).get();
         temp.then(querySnapshot => {
           const documents = querySnapshot.docs.map(doc => doc.data())
           console.log(documents);

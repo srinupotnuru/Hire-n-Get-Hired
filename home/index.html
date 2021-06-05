@@ -59,14 +59,19 @@
             <fieldset >
   
               <fieldset class="form-group">
-                <input class="form-control form-control-lg"
-                  formControlName="title"
-                  type="text"
-                  placeholder="Job Title" id="title" />
+                <select class="form-control" aria-label="Default select example " id="cat">
+                  <option selected>Select Job</option>
+                  <option value="Plumber">Plumber</option>
+                  <option value="Painter">Painter</option>
+                  <option value="Gardener">Gardener</option>
+                  <option value="Constructor">Constructor</option>
+                  <option value="Roofer">Roofer</option>
+                  <option value="Carpenter">Carpenter</option>
+                  <option value="Welder">Welder</option>
+                  <option value="Electrician">Electrician</option>
+                  <option value="DeliveryBoy">DeliveryBoy</option>
+                </select>
               </fieldset>
-             
-              
-             
               <fieldset class="form-group">
                 <textarea class="form-control"
                   formControlName="body"
@@ -85,7 +90,7 @@
                   type="text"
                   placeholder="Additional Job Details"
                  
-                   id="tag"/>
+                   id="additional"/>
               </fieldset>
               
               <fieldset class="form-group">
