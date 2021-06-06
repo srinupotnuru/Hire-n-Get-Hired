@@ -29,3 +29,10 @@ var firebaseConfig = {
     firebase.auth().onAuthStateChanged(callBack);
   }
   
+  function run(item)
+  {
+    //console.log(item);
+    window.location.href="/Jobpreview.html";
+    sessionStorage.setItem("data",item);
+    //console.log(sessionStorage.getItem("data"));
+  }

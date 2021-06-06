@@ -79,4 +79,5 @@ function push()
           const documents = querySnapshot.docs.map(doc => doc.data())
           console.log(documents);
         });
+       
 }
