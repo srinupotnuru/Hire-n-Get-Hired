@@ -1,0 +1,27 @@
+.box{
+    max-width: 900px;
+    max-height: auto;
+    padding: 20px;
+    background-color: blueviolet;
+    color:white;
+    box-shadow: 10px 10px 10px gray;
+    margin-bottom: 20px;
+}
+.box:hover{
+    box-shadow: 16px 16px 16px gray;
+}
+h5{
+    font-weight: 600px;
+}
+p{
+    white-space: pre-line;
+}
+#header{
+    padding: 20px;
+    max-width: 900px;
+    box-shadow: 10px 10px 10px  gray;
+    margin-bottom: 10px;
+}
+#header:hover{
+    box-shadow: 15px 15px 15px gray;
+}

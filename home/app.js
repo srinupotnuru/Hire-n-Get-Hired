@@ -1,11 +1,11 @@
-var firebaseConfig = {
-  apiKey: "AIzaSyCxTHYADPh8vbN4cYw9YMB4tvvi_d7VXmg",
-  authDomain: "codelabs-4373c.firebaseapp.com",
-  projectId: "codelabs-4373c",
-  storageBucket: "codelabs-4373c.appspot.com",
-  messagingSenderId: "835368477952",
-  appId: "1:835368477952:web:f0a339b55b5dc460bdffe5",
-  measurementId: "G-9KHLDL9H2H"
+const firebaseConfig = {
+  apiKey: "AIzaSyDPX7KOs0AAXwbKMY53WOJP3b1KrbzFDek",
+  authDomain: "hire-n-get-hired.firebaseapp.com",
+  projectId: "hire-n-get-hired",
+  storageBucket: "hire-n-get-hired.appspot.com",
+  messagingSenderId: "192069608117",
+  appId: "1:192069608117:web:a94123f3c31c38a35394fc",
+  measurementId: "G-KL31YTH8E7"
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -74,10 +74,6 @@ function push()
 
     
         });
-        var temp=firebase.firestore().collection(cat).get();
-        temp.then(querySnapshot => {
-          const documents = querySnapshot.docs.map(doc => doc.data())
-          console.log(documents);
-        });
-       
+        
+       window.location.reload();
 }
